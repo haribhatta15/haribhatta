@@ -9,6 +9,35 @@ body {
   padding: 8rem 0;
 }
 
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: orange;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  animation: moveUpDown 1s infinite alternate;
+}
+
+#scrollToTopBtn:hover {
+  color: white;
+  animation: none;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 .small-text {
   color: #5b5b5b;
   font-size: 14px;
@@ -170,16 +199,19 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 999;
   will-change: transform;
   transition: transform 200ms linear;
 }
-.navbar[class*="-unpinned"] {
+
+/* .navbar[class*="-unpinned"] {
   transform: translate(0, -150%);
-}
+} */
+
 .navbar[class*="-pinned"] {
   transform: translate(0, 0);
 }
+
 .navbar[class*="headroom--not-top"] {
   background: #ffffff;
   border-bottom: 1px solid #f0f0f0;
