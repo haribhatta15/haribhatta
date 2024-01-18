@@ -70,3 +70,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// script.js
+
+const projectContainer = document.querySelector(".project-slider");
+const slides = document.querySelectorAll(".project-slide");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+
+let currentIndex = 0;
+
+arrowLeft.addEventListener("click", () => {
+  currentIndex = Math.max(currentIndex - 1, 0);
+  updateSlide();
+});
+
+arrowRight.addEventListener("click", () => {
+  currentIndex = Math.min(currentIndex + 1, slides.length - 1);
+  updateSlide();
+});
+
+function updateSlide() {
+  const translateValue = -currentIndex * 100;
+  projectContainer.style.transform = `translateX(${translateValue}%)`;
+}
