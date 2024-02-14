@@ -8,8 +8,7 @@ body {
 .full-screen {
   padding: 8rem 0;
 }
-
-#scrollToTopBtn {
+git #scrollToTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
