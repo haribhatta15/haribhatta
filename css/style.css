@@ -8,25 +8,6 @@ body {
 .full-screen {
   padding: 8rem 0;
 }
-git #scrollToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: orange;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 16px;
-  animation: moveUpDown 1s infinite alternate;
-}
-
-#scrollToTopBtn:hover {
-  color: white;
-  animation: none;
-}
 
 @keyframes moveUpDown {
   0% {
